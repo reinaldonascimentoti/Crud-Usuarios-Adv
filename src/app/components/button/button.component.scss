@@ -1,0 +1,20 @@
+.botao-primario {
+  width: auto;
+  outline: none;  
+  border: none;
+  background: #7533a8;
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 6px 20px;
+  border-radius: 3px; 
+  box-shadow: inset 0 0 3px 1px #0a0a0a20;
+  transition: 0.3s linear all;
+  &:hover {
+    cursor: pointer;
+    box-shadow: inset 0 0 5px 3px #0a0a0a40;
+}
+&disabled {
+  cursor: default;
+}
+}

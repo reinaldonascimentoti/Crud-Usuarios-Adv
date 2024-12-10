@@ -1,0 +1,14 @@
+<div class="area-login-background d-none d-md-block"></div>
+
+<div class="area-form">
+  <form>
+    <h1 class="titulo">GESTÃO DE CLIENTES </h1>
+    <h1 class="titulo"> E PROCESSOS</h1>
+    <h1 class="sub-titulo">Mais eficiência para os seus negócios</h1>
+    <input [(ngModel)]="userName" [ngModelOptions]="{ standalone: true }" class="input-form" type="text"
+      placeholder="Digite seu nome">
+    <input class="input-form" type="text" placeholder="Senha">
+    <app-button textButton="Acessar" size="100" (click)="login()"></app-button>
+  </form>
+  <p class="footer">2024| Desenvolvido por: Reinaldo Nascimento</p>
+</div>

@@ -1,0 +1,53 @@
+<div class="container-fluid">
+  <mat-icon class="float-end hover" (click)="closeModal()">close</mat-icon>
+  <h1 class="titulo" *ngIf="!editMode">Cadastro de Usuário</h1>
+  <h1 class="titulo" *ngIf="editMode">Editar Usuário</h1>
+  <h2 class="sub-titulo">Preencha os campos abaixo para salvar o usuário</h2>
+  <form class="row " [formGroup]="formUser">
+    <div class="col-12 col-md-6 mb-2 ">
+      <mat-form-field class="example-full-width w-100">
+        <mat-label>Nome</mat-label>
+        <input type="text" matInput formControlName="name" placeholder="Digite seu nome">
+        @if (formUser.controls['name'].invalid) {
+        <mat-error>Digite um nome válido</mat-error>
+        } </mat-form-field>
+    </div>
+    <div class="col-12 col-md-6 mb-2">
+      <mat-form-field class="example-full-width w-100">
+        <mat-label>CPF</mat-label>
+        <input type="text" matInput formControlName="cpf" placeholder="cpf">
+        @if (formUser.controls['cpf'].invalid) {
+        <mat-error>Digite um cpf valido</mat-error>
+        }
+      </mat-form-field>
+    </div>
+    <div class="col-12 col-md-6 mb-2">
+      <mat-form-field class="example-full-width w-100">
+        <mat-label>Endereço</mat-label>
+        <input type="text" matInput formControlName="endereco" placeholder="endereco">
+        @if (formUser.controls['endereco'].invalid) {
+        <mat-error>Endereço</mat-error>
+        }
+      </mat-form-field>
+    </div>
+    <div class="col-12 col-md-6 mb-2">
+      <mat-form-field class="example-full-width w-100">
+        <mat-label>Telefone</mat-label>
+        <input type="text" matInput formControlName="telefone" placeholder="Telefone">
+        @if (formUser.controls['telefone'].invalid) {
+        <mat-error>Digite um nome válido</mat-error>
+        }
+      </mat-form-field>
+    </div>
+    <div class="col-12 col-md-6 mb-2">
+      <mat-form-field class="example-full-width w-100">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput formControlName="email" placeholder="E-mail">
+        @if (formUser.controls['email'].invalid) {
+        <mat-error>Digite um email válido</mat-error>
+        } </mat-form-field>
+    </div>
+    <div class="col-12 ">
+      <button class="botao-primario float-end" [disabled]="!formUser.valid" (click)="saveUser()">Salvar</button>
+    </div>
+  </form>

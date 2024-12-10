@@ -1,0 +1,30 @@
+<h2 class="titulo">Detalhes do Processo</h2>
+<h2 class="sub-titulo">Informações gerais do Processo</h2>
+<mat-dialog-content>
+  <div *ngFor="let processo of data">
+    <div class="row mt-3">
+      <div class="col-6">
+        <h4 class="titulo-informacao">numeroProcesso</h4>
+        <p class="informacao">{{processo.numeroProcesso}}</p>
+      </div>
+      <div class="col-6">
+        <h4 class="titulo-informacao">Data de Abertura</h4>
+        <p class="informacao">{{processo.dataAbertura}}</p>
+      </div>
+      <div class="col-6">
+        <h4 class="titulo-informacao">Tipo</h4>
+        <p class="informacao">{{processo.tipo}}</p>
+      </div>
+      <div class="col-6">
+        <h4 class="titulo-informacao">E-mail</h4>
+        <p class="informacao" rows="2">{{processo.status}}</p>
+      </div>
+      <div class="col-6">
+        <h4 class="titulo-informacao">Descrição</h4>
+        <p class="informacao">{{processo.descricao}}</p>
+      </div>
+    </div>
+  </div>
+  <mat-dialog-actions>
+    <button mat-button (click)="onClose()">Fechar</button>
+  </mat-dialog-actions>

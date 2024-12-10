@@ -1,0 +1,53 @@
+<h2 mat-dialog-title>Cadastrar Novo Processo</h2>
+<mat-dialog-content>
+  <form [formGroup]="processoForm" (ngSubmit)="onSubmit()">
+
+    <mat-form-field appearance="fill">
+      <mat-label>CPF do Usuário</mat-label>
+      <input matInput formControlName="cpf" (blur)="buscarNomeCliente()" required>
+      <mat-error *ngIf="processoForm.get('cpf')?.invalid && processoForm.get('cpf')?.touched">
+        O CPF é obrigatório.
+      </mat-error>
+    </mat-form-field>
+
+    <div *ngIf="clienteNome" class="cliente-info">
+      <strong>Nome do Cliente:</strong> {{ clienteNome }}
+    </div>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Número do Processo</mat-label>
+      <input matInput formControlName="numeroProcesso" required>
+      <mat-error *ngIf="processoForm.get('numeroProcesso')?.invalid && processoForm.get('numeroProcesso')?.touched">
+        O número do processo é obrigatório.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Data de Abertura</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="dataAbertura" required>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      <mat-error *ngIf="processoForm.get('dataAbertura')?.invalid && processoForm.get('dataAbertura')?.touched">
+        A data de abertura é obrigatória.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Tipo</mat-label>
+      <input matInput formControlName="tipo" required>
+      <mat-error *ngIf="processoForm.get('tipo')?.invalid && processoForm.get('tipo')?.touched">
+        O tipo é obrigatório.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Descrição</mat-label>
+      <textarea matInput formControlName="descricao"></textarea>
+    </mat-form-field>
+
+    <div class="dialog-actions">
+      <button mat-button type="submit" color="primary" [disabled]="!processoForm.valid">Cadastrar</button>
+      <button mat-button (click)="onClose()">Cancelar</button>
+    </div>
+  </form>
+</mat-dialog-content>

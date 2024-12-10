@@ -1,0 +1,115 @@
+<app-menu></app-menu>
+<div class="container-fluid pt-3">
+  <div class="row">
+    <!-- lado esquerdo da tela">-->
+    <div class="col-12 col-lg-9">
+      <div class="card-info">
+        <div class="row">
+          <div class="col-12 col-md-8">
+            <h1 class="titulo">Gestão de Clientes e Processos</h1>
+            <h3 class="sub-titulo">Mais eficiência na gestão dos <span>Usuarios</span>. Chega de
+              sistemas
+              antigos e sem usabilidade, agora com o Gestão ADVANCE seu trabalho fica até 3x mais rápido e simplificado.
+              Confira um resumo das informações em nosso <span>Dashboard</span>.</h3>
+            <div class="row">
+              <div class="col-6">
+                <div class="card-info">
+                  <span class="texto-btn1">
+                    <mat-icon>person</mat-icon> Gestão de Clientes</span>
+                  <app-button textButton="Iniciar" routerLink="/crud"></app-button>
+
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card-info">
+                  <span class="texto-btn">
+                    <mat-icon>balance</mat-icon> Gestão de Processos</span>
+                  <app-button textButton="Iniciar" routerLink="/processos"></app-button>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <img id="dashboard" src="../../../assets/dashboard.png" width="60%" class="float-left">
+          </div>
+        </div>
+      </div>
+      <!-- CARD-ESQUERDA ">-->
+      <div class="row mt-4">
+        <div class="col-6">
+          <div class="card-info">
+            <div class="row">
+              <div class="col-8 ">
+                <p class="texto-card">Total de usuários cadastrados no sistema</p>
+                <p class="numero-card">81</p>
+                <p class="destaque-card">+5 adicionados no ultimo mês</p>
+              </div>
+              <div class="col-4">
+                <mat-progress-spinner class="example-margin mx-auto color-spinner" mode="determinate"
+                  value="80"></mat-progress-spinner>
+                <p class="info-spinner">81/150</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- CARD-DIREITA ">-->
+        <div class="col-6">
+          <div class="card-info">
+            <div class="row">
+              <div class="col-8 ">
+                <p class="texto-card">Total de <span>processos</span> cadastrados no ultimo mês</p>
+                <p class="numero-card">4</p>
+                <p class="destaque-card">+2 adicionados no ultimo mês</p>
+              </div>
+              <div class="col-4">
+                <mat-progress-spinner class="example-margin mx-auto color-spinner" mode="determinate"
+                  value="81"></mat-progress-spinner>
+                <p class="info-spinner">4/5</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- CARD USUÁRIO CADASTRADO -->
+        <div class="col-12 mt-4">
+          <div class="card-info">
+            <h3 class="titulo">último usuário cadastrado</h3>
+            <hr class="hr">
+            <div class="row">
+              <div class="col-1"><mat-icon>account_circle</mat-icon></div>
+              <div class="col-1">
+                <p class="texto-p">1</p>
+              </div>
+              <div class="col">
+                <p class="texto-p">Reinaldo Nascimento</p>
+              </div>
+              <div class="col">
+                <p class="texto-p">Desenvolvedor</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Lado Direito -->
+    <div class="col-12 col-lg-3">
+      <div class="card-info">
+        <div class="container-perfil">
+          <img src="../../../assets/perfil.jpg" class="img-perfil" width="90px">
+          <h4>Seja bem vindo</h4>
+          <h5>Reinaldo Nascimento</h5>
+          <li><mat-icon>location_on</mat-icon>CE - Brasil</li>
+        </div>
+        <hr class="hr">
+        <p class="texto-p">Este sistema foi desenvolvido para facilitar a gestão de usuários e processos.Nele você pode
+          acompnhar e gerenciar os dados de seus usuários</p>
+        <hr class="hr">
+
+        <li><mat-icon>person</mat-icon>Gerencie usuarios</li>
+        <li><mat-icon>loyalty</mat-icon>Adcione processos</li>
+        <li><mat-icon>format_list_bulleted</mat-icon>Consulte cadastrado</li>
+        <li><mat-icon>delete</mat-icon>Exclua usuarios</li>
+      </div>
+    </div>
+  </div>
+</div>

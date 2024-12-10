@@ -1,0 +1,44 @@
+<h2 mat-dialog-title>Editar Processo</h2>
+<mat-dialog-content>
+  <form class="row " [formGroup]="editProcessoForm" (ngSubmit)="onSubmit()">
+    <div class="col-12 col-md-6 mb-2 ">
+      <mat-form-field class="example-full-width w-100">
+        <mat-label>Número do Processo</mat-label>
+        <input matInput formControlName="numeroProcesso" required>
+      </mat-form-field>
+    </div>
+    <div class="col-12 col-md-6 mb-2 ">
+      <mat-form-field class="example-full-width w-100">
+        <mat-label>Tipo</mat-label>
+        <input matInput formControlName="tipo" required>
+      </mat-form-field>
+    </div>
+
+    <div class="col-12 col-md-6 mb-2 ">
+      <mat-form-field class="example-full-width w-100">
+        <mat-label>Status</mat-label>
+        <input matInput formControlName="status" required>
+      </mat-form-field>
+    </div>
+
+    <div class="col-12 col-md-6 mb-2 ">
+      <mat-form-field class="example-full-width w-100">
+        <mat-label>Descrição</mat-label>
+        <textarea matInput formControlName="descricao" required></textarea>
+      </mat-form-field>
+    </div>
+    <div class="col-12 col-md-6 mb-2 ">
+      <mat-form-field class="example-full-width w-100">
+        <mat-label>Data de Abertura</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="dataAbertura" required>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+    <mat-dialog-actions>
+      <button mat-button (click)="onCancel()">Cancelar</button>
+      <button mat-button type="submit" [disabled]="editProcessoForm.invalid">Salvar</button>
+    </mat-dialog-actions>
+  </form>
+</mat-dialog-content>

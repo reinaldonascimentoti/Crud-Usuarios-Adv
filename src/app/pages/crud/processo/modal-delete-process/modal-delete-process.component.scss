@@ -1,0 +1,107 @@
+.titulo{
+  font-size: 24px;
+  font-weight: 500;
+  padding: 0;
+  margin: 0 !important;
+  margin-left: 2px;
+  color: var(--primary-color);
+}
+
+.subtitulo{
+  font-size: 16px;
+  font-weight: 300;
+  margin-left: 5px;
+ padding: 2px 0px 14px 0px;
+  color: #8f8f8f;
+  span{ color: var(--gray-color); font-weight: 500; }
+}
+.botao-primario {
+  width: auto;
+  outline: none;  
+  border: none;
+  background: #7533a8;
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 12px;
+  padding: 6px 20px;
+  border-radius: 3px;
+  box-shadow: inset 0 0 3px 1px #0a0a0a20;
+  transition: 0.3s linear all;
+  &:hover {
+    cursor: pointer;
+    box-shadow: inset 0 0 5px 3px #0a0a0a40;
+}
+&disabled {
+  cursor: default;
+}
+}
+.modal-container {
+  width: 800px;
+  height: 400px;
+  position: relative;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.field-container {
+  width: 23%; // Ajuste conforme necessário para dar espaço entre os campos
+  margin-right: 8px;
+  
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.form-field {
+  width: 100%;
+  
+  ::ng-deep .mat-form-field-wrapper {
+    margin: 0;
+    padding: 0;
+  }
+
+  ::ng-deep .mat-form-field-infix {
+    width: auto !important;
+    min-width: 0 !important;
+  }
+}
+
+.input-field {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+
+.textarea-field {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  resize: none;
+  padding: 8px;
+  box-sizing: border-box;
+  min-height: 60px;
+  max-height: 80px;
+}
+
+.button-group-right {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  margin: 16px 2px 0 0;
+  
+  button {
+    min-width: 120px;
+  }
+}
+.close-icon {
+  position: absolute;
+  justify-content: flex-end;
+  top: 8px; 
+  right: 8px;
+  cursor: pointer;
+}
+
